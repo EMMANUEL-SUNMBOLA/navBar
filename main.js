@@ -19,7 +19,7 @@ window.onresize = function(){
 }
 // adds stuffs when the width is below 792
 function chechWidth(){
-      output.innerText = "window is " + windowWidth + " wide";
+      output.innerText = "window is " + windowWidth + "px wide";
     if (windowWidth < 792){
         output.classList.add("small");
         nav.classList.add("small-nav");
@@ -27,6 +27,7 @@ function chechWidth(){
     }else{
         output.classList.remove("small"); 
         nav.classList.remove("small-nav");
+        chechWidth()
     }
 }
 // changes the icon of the hamburger onclick
